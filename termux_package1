@@ -1,0 +1,24 @@
+echo " "
+echo " ~ CMD MENU ~ "                                      echo "———————————————————————"
+                                                           echo -e "\e[34m[1] - phoneTemp\e[0m"
+echo -e "\e[34m[2] - games\e[0m"
+echo -e "\e[34m[3] - quit\e[0m"
+read -p "enter command : " cmd_command                     while true; do
+    read -p "enter command : " cmd_command
+
+    if [ "$cmd_command" = "1" ]; then                              # Phone temperature logic                                  cat /sys/class/thermal/thermal_zone0/temp | awk '{print "phone temperature : "$1/1000 " °C"}'                     fi                                                                                                                    if [ "$cmd_command" = "2" ]; then                          echo "*  *  *  *  *  *  *  *  *  *"
+    echo -e "\e[31m[1] - Russian Roulette\e[0m"
+    read -p "select game you wanna play : " gamechoice
+    if [ "$gamechoice" = "1" ]; then                               # Russian Roulette game loop                               echo "Welcome to Russian Roulette!"                        echo "The gun has 6 chambers. One is loaded."              echo "Press ENTER to pull the trigger or press 'q' to quit."                                                          echo " "                                           
+        while true; do
+            # Prompt user for input to pull the trigger or read -p "[ENTER] - shoot , [Q] - quit : " trigg
+er
+                                                                       # Exit the loop if user presses 'q'
+            if [ "$trigger" = "q" ]; then                                  echo "You quit the game. Goodbye!"
+                echo " "
+                break
+            fi                                                                                                                                                                          chamber=$((RANDOM % 6 + 1))                                            bullet_left=6                                              if [ "$chamber" -eq 1 ]; then                                  echo -e  "\e[33mBANG! You're shot!\e[0m"
+break
+            else
+                echo " * | *"                                              echo -e "\e[32mClick... You're safe this time. [$bullet_left/6]\e[0m"
+            fi                                                     done                                                   fi                                                                                                                    fi
